@@ -6,10 +6,12 @@
 <% if enhanced_cart.empty? %>
 
 
-<div class="alert alert-primary" role="alert">EMPTY CART</div>
+<div class="alert alert-danger" role="alert">
+<p>EMPTY CART</p>
+</div>
 
+<button type="button" class="btn btn-link"><%= link_to 'Home', :root %></button>
 
-<%= link_to 'Home', :root %>
 
 <% else %>
   <div class="panel panel-default items">
