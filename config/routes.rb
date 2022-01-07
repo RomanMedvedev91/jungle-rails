@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :categories, only: [:create, :show]
+    resources :categories, only: [:create, :index]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
