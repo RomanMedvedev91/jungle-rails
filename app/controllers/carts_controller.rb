@@ -1,5 +1,9 @@
 class CartsController < ApplicationController
 
+  #sample using auth secure for controller 
+  # before_filter :authorize
+
+
   def show
   end
 
