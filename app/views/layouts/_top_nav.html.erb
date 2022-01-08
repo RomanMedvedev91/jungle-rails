@@ -47,9 +47,10 @@
         </li>
 
         <% if current_user %>
+        <ul class="nav navbar-nav navbar-right user_auth">
         <li>
-          Signed in as <%= current_user.name %>
-        </li>        
+          <a>Signed in as <%= current_user.first_name %> <%= current_user.last_name%> </a>
+        </li>     
         <li>
           <%= link_to "Logout", '/logout' %>
         </li>
@@ -60,8 +61,13 @@
         <li>
             <%= link_to 'Signup', '/signup' %>
         </li>
+        </ul>
           <% end %>
-      </ul>
-    </div>
-  </div>
-</nav>
+
+        </ul>
+
+        
+
+        </div>
+        </div>
+        </nav>
