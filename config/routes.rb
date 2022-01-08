@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :categories, only: [:new, :create, :index]
   end
 
+  #user auth
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
