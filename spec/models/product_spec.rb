@@ -6,7 +6,7 @@ RSpec.describe Product, type: :model do
     it 'should save successfuly' do
       @product = Product.new({name: "Name", price: 10, quantity: 2, category_id: 2})
       @product.save
-      expect(@product).to be_present
+      expect(@product).to be_present, @product.errors.full_messages
     end
 
     it 'should have name' do
@@ -30,4 +30,6 @@ RSpec.describe Product, type: :model do
     end
     
   end
+
+  
 end
