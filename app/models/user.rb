@@ -10,8 +10,9 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
 
   def self.authenticate_with_credentials(email, password)
+  email.downcase!
+  email.gsub!(/\s+/, '')
    user = User.find_by_email(email)
-    user.email.gsub!(/\s+/, '')
 
     if user && user.authenticate(password)
       user

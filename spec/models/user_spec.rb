@@ -88,22 +88,24 @@ RSpec.describe User, type: :model do
     @user = User.create!({
       first_name: "Roman", 
       last_name: "Medvedev", 
-      email: "  roman.medvedev@gmail.com  ", 
+      email: "roman.medvedev@gmail.com", 
       password: "123456", 
       password_confirmation: "123456"})
-      user = User.authenticate_with_credentials(@user.email, @user.password)
+      user = User.authenticate_with_credentials(" roman.medvedev@gmail.com ", @user.password)
+      expect(user.email).to eq("roman.medvedev@gmail.com")
+    end
+    
+    it 'should valid with email case insensitive' do
+    @user = User.create!({
+      first_name: "Roman", 
+      last_name: "Medvedev", 
+      email: "roman.medvedev@gmail.com", 
+      password: "123456", 
+      password_confirmation: "123456"})
+      user = User.authenticate_with_credentials("Roman.Medvedev@GMAIL.Com", @user.password)
       expect(user.email).to eq("roman.medvedev@gmail.com")
     end
 
-
   end
 
-
-
 end
-
-
-
-# add to model user.rb 
- # validates: password_digest, confirmation: true
-  # validates: password_digest, confirmation: { case_sensitive: false }
