@@ -80,9 +80,22 @@ RSpec.describe User, type: :model do
       email: "roman.medvedev@gmail.com", 
       password: "123456", 
       password_confirmation: "123456"})
-      user = User.authenticate_with_credentials("roman.medvedev@gmail.com", "123456")
+      user = User.authenticate_with_credentials(@user.email, @user.password)
       expect(user).to be_truthy
     end
+
+    it 'should valid with addition spacing' do
+    @user = User.create!({
+      first_name: "Roman", 
+      last_name: "Medvedev", 
+      email: "  roman.medvedev@gmail.com  ", 
+      password: "123456", 
+      password_confirmation: "123456"})
+      user = User.authenticate_with_credentials(@user.email, @user.password)
+      expect(user.email).to eq("roman.medvedev@gmail.com")
+    end
+
+
   end
 
 
