@@ -4,6 +4,42 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Screenshots
 
+- screenshoot #1
+
+!["screenshoot#1 of scheduler project"](https://github.com/RomanMedvedev91/jungle-rails/blob/master/app/assets/images/Screenshot%231.png?raw=true)
+
+- screenshoot #2
+
+!["screenshoot#2 of scheduler project"](https://github.com/RomanMedvedev91/jungle-rails/blob/master/app/assets/images/Screenshot%232.png?raw=true)
+
+- screenshoot #3
+
+!["screenshoot#3 of scheduler project"](https://github.com/RomanMedvedev91/jungle-rails/blob/master/app/assets/images/Screenshot%233.png?raw=true)
+
+- screenshoot #4
+
+!["screenshoot#4 of scheduler project"](https://github.com/RomanMedvedev91/jungle-rails/blob/master/app/assets/images/Screenshot%234.png?raw=true)
+
+- screenshoot #5
+
+!["screenshoot#5 of scheduler project"](https://github.com/RomanMedvedev91/jungle-rails/blob/master/app/assets/images/Screenshot%235.png?raw=true)
+
+- screenshoot #6
+
+!["screenshoot#6 of scheduler project"](https://github.com/RomanMedvedev91/jungle-rails/blob/master/app/assets/images/Screenshot%236.png?raw=true)
+
+- screenshoot #7
+
+!["screenshoot#7 of scheduler project"](https://github.com/RomanMedvedev91/jungle-rails/blob/master/app/assets/images/Screenshot%237.png?raw=true)
+
+- screenshoot #8
+
+!["screenshoot#8 of scheduler project"](https://github.com/RomanMedvedev91/jungle-rails/blob/master/app/assets/images/Screenshot%238.png?raw=true)
+
+- screenshoot #9
+
+!["screenshoot#9 of scheduler project"](https://github.com/RomanMedvedev91/jungle-rails/blob/master/app/assets/images/Screenshot%239.png?raw=true)
+
 ## Additional Steps for Apple M1 Machines
 
 1. Make sure that you are runnning Ruby 2.6.6 (`ruby -v`)
@@ -33,3 +69,6 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 - PostgreSQL 9.x
 - Stripe
+- bcrypt
+- rspec-rails
+- capybara
