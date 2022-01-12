@@ -1,10 +1,6 @@
 require 'rails_helper'
 
-# RSpec.feature "ProductDetails", type: :feature do
-#   pending "add some scenarios (or delete) #{__FILE__}"
-# end
-
-RSpec.feature "Visitor navigates to product", type: :feature, js: true do
+RSpec.feature "Visitor add to cart", type: :feature, js: true do
 
   # SETUP
   before :each do
@@ -25,8 +21,9 @@ RSpec.feature "Visitor navigates to product", type: :feature, js: true do
  
      # DEBUG / VERIFY
      # commented out b/c it's for debugging only
-     click_on "Details"
-     expect(page).to have_css 'section.products-show'
+     click_on "Add"
+
+     expect(page).to have_text 'My Cart (1)'
      
      save_screenshot
    end
